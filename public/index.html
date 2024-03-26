@@ -1,1 +1,379 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../src/style_2.css">
+    <script src="../src/script.js"></script>
+    <title>A پنل</title>
+</head>
+<body dir="rtl" class="bg-gray-100 relative overflow-hidden h-screen font-body p-0 lg:p-3">
+    <div class="flex h-full">
+        <nav id="box-menu" class="select-none fixed -top-full lg:top-0 right-0 lg:sticky bg-white w-full h-full lg:h-auto lg:rounded-2xl resize-y lg:w-1/5 ml-3 shadow-lg hidden lg:block z-10">
+            <div class="flex flex-col h-full">
+                <button class="dismiss absolute top-5 right-5 block lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="h-28 flex justify-center items-center flex-col justify-around">
+                    <div class="h-16 w-16 rounded-full shadow-inner font-serif bg-gradient-to-tl from-green-400 to-blue-300 flex">
+                        <span class="text-white text-3xl m-auto">A</span>
+                    </div>
+                    <span class="text-green-400 font-mono text-bold">A Panel</span>
+                </div>
+                <ul id="menu">
+                    <li class="flex dashboard active border-l-2 border-blue-400 bg-gradient-to-r from-blue-200 text-blue-700 p-3 items-center hover:bg-blue-50 hover:text-blue-700">
+                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                            <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
+                            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+                        </svg>
+                        <span>داشبورد</span>
+                    </li>
+                    <li class="flex users p-3 items-center hover:bg-blue-50 hover:text-blue-700">
+                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                        </svg>
+                        <span>کاربران</span>
+                    </li>
+                    <li class="flex forms p-3 items-center hover:bg-blue-50 hover:text-blue-700">
+                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
+                            <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"/>
+                            <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0z"/>
+                        </svg>
+                        <span>فرم ها</span>
+                    </li>
+                    <a href="./login.html" class="flex p-3 items-center hover:bg-blue-50 hover:text-blue-700">
+                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z"/>
+                            <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                        </svg>
+                        <span>ورود</span>
+                    </a>
+                    <a href="./register.html" class="flex p-3 items-center hover:bg-blue-50 hover:text-blue-700">
+                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
+                        </svg>
+                        <span>ثبت نام</span>
+                    </a>
+                </ul>
+                <div class="flex gap-2 self-center mt-auto mb-3">
+                    <svg class="text-blue-500 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                    </svg>
+                    <a class="text-sm hover:text-blue-500" href="">ساخته شده توسط عرشیا نوروزی</a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex flex-col w-full lg:w-4/5">
+            <header class="select-none bg-white self-start lg:rounded-2xl rounded-none w-full h-16 flex items-center justify-between shadow-lg px-4">
+                <button class="w-8 h-8 block lg:hidden hover:text-green-400" id="open-menu">
+                    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </button>
+                <div class="relative h-8 w-50">
+                    <input id="search" class="h-full w-full outline-none placeholder-gray-500 pr-8 focus:from-blue-100 focus:to-blue-50 bg-gradient-to-tl from-gray-100 to-gray-50 rounded-xl text-gray-600" placeholder="جستجو">
+                    <svg class="absolute top-1/4 right-1.5 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                </div>
+                <a href="#"><img class="h-10 w-10 rounded-full" src="../src/logo.png"></a>
+            </header>
+            <div class="h-full w-full overflow-auto mt-3">
+                <section id="dashboard" class="hidden content flex mx-auto self-center mt-4 gap-4 flex-col w-full py-0 p-3 items-center">
+                    <div class="p-2 bg-gradient-to-r from-green-400 to-blue-300 rounded-2xl flex flex-col w-full h-1/3 shadow-lg">
+                        <div class="flex bg-gray-200 rounded-t-xl w-full h-24 shadow-inner">
+                            <svg class="w-12 h-12 bg-transparent rounded-full p-2 m-auto box-content border-dashed border-2 border-black" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                            </svg>
+                        </div>
+                        <a href="#" class="hover:text-green-500 mx-auto bg-gray-100 text-2xl inline-block select-none cursor-pointer font-black py-1 px-2 w-full rounded-b-lg text-center border-b-4 border-green-500">عرشیا نوروزی</a>
+                        <div class="mx-auto mt-3 bg-gray-100 text-2xl inline-block font-bold py-1 px-2 flex rounded-md text-center border-b-4 border-blue-500"><span id="title" class="flex"></span></div>
+                    </div>
+                    <script>
+                        var txt = ['برنامه نویس','طراح وبسایت'];
+                        var delay = 250;
+                        var i=-1;
+                        function type() {
+                            if (i+1 == txt.length){
+                                i=0;
+                                var text = txt[0];
+                            }else{
+                                i++;
+                                var text = txt[i];
+                            }
+                            var isGrow = true;
+                            var timerId = setInterval(
+                                function() {
+                                    $("#title").text(text.substr(0, $("#title").text().length+(isGrow?1:-1)));
+                                    if($("#title").text() == text) {
+                                        isGrow = false;
+                                    }
+                                        
+                                    if($("#title").text() == '') {
+                                        clearInterval(timerId);
+                                    }  
+                                }
+                            , delay);
+                            setTimeout(type, text.length * delay * 2)
+                        }
+                        type()
+                    </script>
+                    <div class="grid shadow-inner bg-gray-200 gap-2 rounded-xl p-3 grid-cols-2 h-1/3 lg:grid-cols-4 w-full">
+                        <a href="#" class="p-3 flex flex-col justify-between items-center bg-blue-500 hover:bg-blue-600 text-white col-auto h-32 rounded-lg shadow-md">
+                            <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud" viewBox="0 0 16 16">
+                                <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+                            </svg>
+                            <span class="typer-num text-xl">2</span>
+                            <span>پروژه</span>
+                        </a>
+                        <a href="#" class="p-3 flex flex-col justify-between items-center bg-green-500 hover:bg-green-600 text-white col-auto h-32 rounded-lg shadow-md">
+                            <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            <span class="typer-num text-xl">0</span>
+                            <span>دوره</span>
+                        </a>
+                        <a href="#" class="p-3 flex flex-col justify-between items-center bg-yellow-500 hover:bg-yellow-600 text-white col-auto h-32 rounded-lg shadow-md">
+                            <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+                                <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+                            </svg>
+                            <span class="typer-num text-xl">100</span>
+                            <span>مهارت ها</span>
+                        </a>
+                        <a href="#" class="p-3 flex flex-col justify-between items-center bg-red-500 hover:bg-red-600 text-white col-auto h-32 rounded-lg shadow-md">
+                            <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                            </svg>
+                            <span class="typer-num text-xl">5</span>
+                            <span>امتیاز</span>
+                        </a>
+                    </div>
+                    <div class="w-full border-2 border-blue-400 p-3 rounded-lg flex flex-col h-1/3 gap-3">
+                        <div class="w-full flex flex-col">
+                            <svg class="w-12 h-12 bg-transparent mx-auto text-blue-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                            </svg>
+                            <span class="border-b-2 border-blue-400 text-2xl text-blue-400 text-center px-2 w-full font-bold">درباره من</span>
+                        </div>
+                        <p class="text-center text-xl px-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                    </div>
+                    <div class="mt-3 flex flex-col gap-2 justify-center items-center">
+                        <div class="bg-purple-400 rounded-3xl h-2 w-16"></div>
+                        <div>
+                            <span>عرشیا نوروزی</span>
+                            <span class="text-gray-500">طراح وب</span>
+                        </div>
+                    </div>
+                </section>
+                <section id="users" class="hidden content flex flex-col gap-3 p-3">
+                    <div class="mas p-3 bg-green-500 rounded-lg border-2 border-green-400 flex w-full items-center">
+                        <button class="my-auto text-3xl text-white mr-3 dismiss">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <div class="flex m-auto gap-2 text-white text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-white text-lg">این یک پیام موفقیت آمیز است.</p>
+                        </div>
+                    </div>
+                    <div class="mas p-3 bg-red-500 rounded-lg border-2 border-red-400 flex w-full items-center">
+                        <button class="my-auto text-3xl text-white mr-3 dismiss">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>                          
+                        </button>
+                        <div class="flex m-auto gap-2 text-white text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd" />
+                            </svg>                                     
+                            <p>این یک پیام هشدار است.</p>
+                        </div>
+                    </div>
+                    <div class="mas p-3 bg-yellow-500 rounded-lg border-2 border-yellow-400 flex w-full items-center">
+                        <button class="my-auto text-3xl text-white mr-3 dismiss">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>                          
+                        </button>
+                        <div class="flex m-auto gap-2 text-white text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-white text-lg">این یک پیام اضطراری است.</p>
+                        </div>
+                    </div>
+                    <div class="mas p-3 bg-blue-500 rounded-lg border-2 border-blue-400 flex w-full items-center">
+                        <button class="my-auto text-3xl text-white mr-3 dismiss">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>                          
+                        </button>
+                        <div class="flex m-auto gap-2 text-white text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-white text-lg">این یک پیام راهنما است.</p>
+                        </div>
+                    </div>
+                    <div class="w-full p-3 shadow-xl flex justify-between rounded-xl bg-white">
+                        <h2 class="text-2xl text-gray-500 font-bold">کاربران</h2>
+                        <div class="flex justify-end w-full h-8">
+                            <input class="h-full w-40 outline-none ring-2 ring-transparent focus:ring-purple-200 placeholder-gray-500 pr-4 bg-gradient-to-tl from-gray-100 to-gray-50 rounded-r-xl text-gray-600" placeholder="نام">
+                            <button class="h-full w-16 text-white bg-purple-400 hover:bg-purple-500 rounded-l-md">
+                                <span>فیلتر</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="shadow-xl w-full bg-white rounded-xl p-2">
+                        <table class="w-full">
+                            <thead class="text-gray-600 border-b border-gray-300">
+                                <tr >
+                                    <th class="text-right p-2">کاربر</th>
+                                    <th>نقش</th>
+                                    <th>ایجاد در</th>
+                                    <th>وضعیت</th>
+                                </tr>
+                            </thead>
+                            <tbody class="p-2 ">
+                                <tr class="text-center">
+                                    <td class='flex items-center gap-3 p-2'>
+                                        <svg class="w-8 h-8 bg-transparent rounded-full p-2 box-content border-dashed border-2 border-black" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                        </svg>
+                                        <span>عرشیا نوروزی</span>
+                                    </td>
+                                    <td>توسعه دهنده</td>
+                                    <td>1403/1/1</td>
+                                    <td><span class="bg-green-200 block text-green-700 text-sm rounded-full w-16 py-1 px-2 m-auto">فعال</span></td>
+                                    <td class="text-purple-400">ویرایش شده</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class='flex items-center gap-3 p-2'>
+                                        <svg class="w-8 h-8 bg-transparent rounded-full p-2 box-content border-dashed border-2 border-black" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                        </svg>
+                                        <span>چارلی</span>
+                                    </td>
+                                    <td>عادی</td>
+                                    <td>1403/3/3</td>
+                                    <td><span class="bg-gray-200 block text-gray-700 text-sm rounded-full py-1 px-2 m-auto w-16 whitespace-nowrap">غیر فعال</span></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class='flex items-center gap-3 p-2'>
+                                        <svg class="w-8 h-8 bg-transparent rounded-full p-2 box-content border-dashed border-2 border-black" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                        </svg>
+                                        <span>امیر</span>
+                                    </td>
+                                    <td>عادی</td>
+                                    <td>1403/3/3</td>
+                                    <td><span class="bg-gray-200 block text-gray-700 text-sm rounded-full py-1 px-2 m-auto w-16 whitespace-nowrap">غیر فعال</span></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class='flex items-center gap-3 p-2'>
+                                        <svg class="w-8 h-8 bg-transparent rounded-full p-2 box-content border-dashed border-2 border-black" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                        </svg>
+                                        <span>محمد</span>
+                                    </td>
+                                    <td>عادی</td>
+                                    <td>1403/3/3</td>
+                                    <td><span class="bg-gray-200 block text-gray-700 text-sm rounded-full py-1 px-2 m-auto w-16 whitespace-nowrap">غیر فعال</span></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class='flex items-center gap-3 p-2'>
+                                        <svg class="w-8 h-8 bg-transparent rounded-full p-2 box-content border-dashed border-2 border-black" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                        </svg>
+                                        <span>مهران</span>
+                                    </td>
+                                    <td>عادی</td>
+                                    <td>1403/3/3</td>
+                                    <td><span class="bg-gray-200 block text-gray-700 text-sm rounded-full py-1 px-2 m-auto w-16 whitespace-nowrap">غیر فعال</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="border-t border-gray-300 flex p-3">
+                            <div class="m-auto flex">
+                                <a href="#" class="p-1 w-8 h-8 text-center hover:bg-pink-300 hover:border-pink-300 rounded-r-lg bg-purple-500 text-white">1</a>
+                                <a href="#" class="p-1 w-8 h-8 text-center hover:bg-pink-300 hover:border-pink-300 border border-gray-300">2</a>
+                                <a href="#" class="p-1 w-8 h-8 text-center hover:bg-pink-300 hover:border-pink-300 border border-gray-300">3</a>
+                                <a href="#" class="p-1 w-8 h-8 text-center hover:bg-pink-300 hover:border-pink-300 border border-gray-300 rounded-l-lg">></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="forms" class="hidden content flex flex-col h-full p-3">
+                    <h2 class="text-3xl p-3">فرم ها</h2>
+                    <div class="bg-white rounded-2xl m-auto shadow-xl w-96 p-5">
+                        <form action="#" class="flex-col flex gap-3">
+                            <div class="flex items-center justify-center w-full">
+                                <hr class="w-full">
+                                <h3 class="whitespace-nowrap mx-2 text-sm text-gray-700">فرم ثبت کاربر</h3>
+                                <hr class="w-full">
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="email" class="text-red-400">ایمیل</label>
+                                <input id="email" tabindex="1" placeholder="ایمیل شما" value="panel1403@gmail.com" class="h-10 outline-none border-2 focus:ring-2 focus:ring-red-300 border-red-400 placeholder-red-400 h-8 pr-3 rounded-lg text-red-400">
+                                <p class="mt-1 text-red-400 text-sm mx-auto">ایمیل نامعتبر</p>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="name" class="text-green-600">نام</label>
+                                <input id="name" tabindex="2" placeholder="نام شما" value="عرشیا" class="h-10 outline-none border-2 focus:ring-2 focus:ring-green-300 border-green-400 placeholder-gray-500 h-8 pr-3 rounded-lg text-green-600">
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="familyname">فامیلی</label>
+                                <input id="familyname" tabindex="3" placeholder="نام خانوادگی شما" class="h-10 outline-none border-2 focus:ring-2 focus:ring-gray-300 border-gray-400 placeholder-gray-500 h-8 pr-3 rounded-lg text-gray-600">
+                            </div>
+                            <input type="submit" tabindex="4" value="ثبت" class="cursor-pointer hover:bg-blue-800 bg-blue-700 rounded-xl w-full h-10 text-white">
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div id="cover" class="bg-gray-700 w-full h-full fixed top-0 right-0 z-40 opacity-0 hidden"></div>
+    <div id="search-up" class="pop-up flex flex-col z-50 lg:h-4/6 bg-white w-full h-full fixed top-0 right-0 transform lg:translate-x-1/2 lg:w-1/2 lg:h-auto lg:rounded-2xl lg:top-10 lg:right-1/2">
+        <div class="flex items-center m-2">
+            <button class="dismiss block lg:hidden mx-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>                  
+            </button>
+            <div class="relative h-8 w-full">
+                <input class="h-full w-full outline-none placeholder-gray-500 pr-3 bg-gray-100 rounded-xl text-gray-600" placeholder="جستجو">
+                <a href="#" class="bg-white flex shadow-sm rounded-lg w-6 h-6 absolute top-1/2 transform -translate-y-1/2 left-1.5 text-gray-500 hover:shadow-none hover:bg-gray-50 click:shadow-inner">
+                    <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="grid m-1 gap-3 grid-cols-3 overflow-y-scroll p-2">
+            <div class="h-24 bg-purple-400 col-span-2 rounded-lg"></div>
+            <div class="h-24 bg-blue-400 col-span-1 rounded-lg"></div>
+            <div class="h-24 bg-green-400 col-span-3 rounded-lg"></div>
+            <div class="h-24 bg-yellow-400 col-span-1 rounded-lg"></div>
+            <div class="h-24 bg-red-400 col-span-2 rounded-lg"></div>
+            <div class="h-24 bg-indigo-400 col-span-2 rounded-lg"></div>
+            <div class="h-24 bg-gray-400 col-span-1 rounded-lg"></div>
+            <div class="h-24 bg-pink-400 col-span-3 rounded-lg"></div>
+            <div class="h-24 bg-purple-400 col-span-2 rounded-lg"></div>
+            <div class="h-24 bg-blue-400 col-span-1 rounded-lg"></div>
+            <div class="h-24 bg-green-400 col-span-3 rounded-lg"></div>
+            <div class="h-24 bg-yellow-400 col-span-1 rounded-lg"></div>
+            <div class="h-24 bg-red-400 col-span-2 rounded-lg"></div>
+            <div class="h-24 bg-indigo-400 col-span-2 rounded-lg"></div>
+            <div class="h-24 bg-gray-400 col-span-1 rounded-lg"></div>
+            <div class="h-24 bg-pink-400 col-span-3 rounded-lg"></div>
+        </div>
+    </div>
+</body>
+</html>
