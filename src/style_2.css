@@ -1,0 +1,15 @@
+#title:after {
+    content: "";
+    display: inline-block;
+    background-color: black;
+    width: 0.1px;
+    margin: auto 0.25rem auto;
+    height: 2rem;
+    animation: on-off 1s infinite 1000ms;
+}
+
+@keyframes on-off {
+    to{
+        background-color: transparent;
+    }
+}
