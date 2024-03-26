@@ -6,5 +6,3 @@
 ```
 npm install 
 ```
-
-I Hope Useful for You.🥰
